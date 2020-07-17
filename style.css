@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lexend Zetta', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    background-color: #C4698D;
+    /*min-height: 100vh;*/
+}
+
+.container {
+    position: relative;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
+    margin: 40px !important;
+    margin-bottom: 40px !important;
+    grid-auto-flow: dense;
+    grid-gap: 10px;
+}
+
+.container .box {
+    background: #C87395;
+    padding: 2em;
+    display: grid;
+    font-size: 1rem;
+    place-items: center;
+    text-align: center;
+    color: #ffffff;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.container .box:hover {
+    background: #417184;
+}
+
+.container .box img {
+    position: relative;
+    width: 50px;
+    max-width: 100px;
+    margin-bottom: .5em;
+    color: #fefefe;
+}
+
+img:hover {
+    color: #fefefe;
+}
+
+.container .box:nth-child(1) {
+    grid-column: span 2;
+}
+
+.container .box:nth-child(2) {
+    grid-row: span 2;
+}
+
+.container .box:nth-child(4) {
+    grid-row: span 2;
+}
+
+.container .box:nth-child(7) {
+    grid-column: span 3;
+}
+
+@media (max-width: 991px) {
+    .container {
+        grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+        grid-template-rows: minmax(auto, auto);
+    }
+    .container .box {
+        grid-column: unset !important;
+        grid-row: unset !important;
+    }
+}
